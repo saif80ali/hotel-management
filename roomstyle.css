@@ -1,0 +1,75 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to top left, #5d4954, rgba(255,0,0,0));
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    /* background-image: linear-gradient(to right, rgba(255,0,0,0), ); */
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 70vw;
+    background-color: white;
+    box-shadow: 13px -10px 11px black;
+   
+}
+
+.box{
+    margin-top: 17px;
+    display: flex;
+    /* border: 3px solid #5d4954; */
+    height: 63%;
+    width: 100%;
+}
+.lastbox{
+    margin-bottom: 17px;
+}
+.img{
+    width: 48%;
+    height: 100%;
+
+}
+.img:hover{
+    opacity: 0.7;
+}
+.Description{
+    width: 52%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Description p{
+    margin: 3px 17px;
+    font-family: 'Playball', cursive;
+    font-size: 23px;
+    
+}
+.Description span{
+    font-weight: bold;
+    /* font-family: 'Playball', cursive; */
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 19px;
+
+}
+.Description button{
+    background-color: #33AAFF;
+    color: white;
+    height: 40px;
+    width: 20%;
+    margin: 9px auto;
+    border-radius: 7px;
+    border: none;
+    font-weight: bold;
+    outline: none;
+}
+.Description button:hover{
+    background-color: white;
+    color:#33AAFF;
+    border: 2px solid #33AAFF;
+}

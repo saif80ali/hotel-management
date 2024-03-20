@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SignUp Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Rowdies:wght@300&display=swap" rel="stylesheet">
+<style>
+*{
+box-sizing:border-box;
+margin:0px;
+padding:0px;
+font-family: 'Rowdies', cursive;
+}
+nav{
+    width: 100vw;
+    height: 41px;
+    background-color: black;
+}
+nav ul h1{
+    color: white;
+    font-size: 2rem;
+    height: 41px;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header{
+    height: 27px;
+width:100vw;
+text-align:center;
+color:#5d452e;
+}
+.input{
+background-image: url("blog2.jpg") ;
+background-position:center;
+background-repeat: no-repeat;
+background-size:cover;
+margin:8px;
+border-radius: 12px;
+
+}
+.input form{
+margin:auto;
+width:600px;
+  outline:none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.data{
+padding: 12px;
+    opacity: 0.8;
+outline: none;
+margin: 4px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 580px;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 12px;
+}
+.gender1{
+width: 580px;
+    display: flex;
+    flex-direction: row;
+    font-size: 19px;
+       margin: 4px 0px;
+color: white;
+}
+.gender{
+padding: 12px;
+    opacity: 0.8;
+width: 100%;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 2px solid black;
+    outline: none;
+}
+.btn{
+margin: 9px;
+    display: flex;
+
+}
+.button{
+    cursor: pointer;
+    margin: 0px 8px;
+    border: 2px solid black;
+    width: 200px;
+    font-size: 1rem;
+    height: 41px;
+    border-radius: 8px;
+    background-color: red;
+    color: white;
+}
+.button:hover {
+background-color: black;
+
+}
+
+#date{
+padding: 12px;
+        opacity: 0.8;
+width: 580px;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 2px solid black;
+outline: none;
+}
+</style>
+</head>
+<body>
+<nav> <ul>
+      <h1>Accor Hotels Registration Page</h1>
+ </ul>
+</nav>
+<header><h2>Welcome To This Website. Signup And Be Our Customer<h2></header>
+
+<div class="input">
+<form  action="about.txt" method="post">
+ <input type="text" name="myFirstName" id="name" class="data" placeholder="Please enter your first name..">  
+ <input type="text" name="myLastName" id="lastname" class="data" placeholder="Please enter your last name...">
+  <div class="gender1"> 
+
+<select class="gender">
+                         <option class="gender" value="gnts" name="myGender"> Gender </option>
+                          <option class="gender" value="male" name="myGender"> Male </option>
+                             <option class="gender" value="female" value="female" "myGender"> Female </option>
+                            <option class="gender" value="others"  value="others" "myGender"> Others </option>
+</select>
+     </div>
+ <input type="text" name="myAddress" id="addres" class="data" placeholder="Enter your address...">
+ <input type="phone" name="myPostalCode" id="code" class="data"  placeholder=" Enter your postal code...">
+ <input type="phone" name="myPhone" id="phone" class="data" placeholder=" Enter your phone number...">
+  <input type="date" name="date" id="date" placeholder=" dd/mm/yyyy">
+ <input type="password" name="myPassword" id="passwd" class="data" placeholder=" Enter your password...">
+ <input type="password" name="myPassword2"  class="data" placeholder="Re-enter your password...">
+  <div class="btn">
+<button class="button">Signup</button>
+<input type="reset" value="Reset" class="button">
+<div>
+
+</form>
+</div>
+
+</body>
+</html>

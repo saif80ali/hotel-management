@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminHome</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        #navigation{
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+        ul{
+            display: flex;
+        }
+        ul li a {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 2px 4px;
+            cursor: pointer;
+            padding: 13px;
+            text-decoration: none;
+            padding: 13px 27px;
+            border-radius: 30px;
+        }
+        ul li{
+            list-style: none;
+            margin: 14px;
+        }
+        #log{
+            border: 2px solid #57b07e;
+            color: #57b07e;
+
+        }
+        #sign{
+            color: white;
+            margin-right: 44px;
+            background-color: #57b07e;
+        }
+        #sign:hover{
+            background-color: #4fca85;
+        }
+        #log:hover{
+            color:#4fca85 ;
+            border: 2px solid #4fca85;
+        }
+        div#container {
+            border-radius: 30px;
+            width: 97vw;
+            height: 85vh;
+            margin: 5px auto;
+            display: flex;
+            box-shadow: 10px 12px 18px;
+        }
+        div#box1{
+            border-radius: 30px;
+            margin-left: 6px;
+            width: 44%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        #box1 img {
+            height: 240px;
+            filter: invert(33%);
+        }
+        #box1 h2{
+            text-align: center;
+
+        }
+        #box1 h1{
+            font-family: 'Dancing Script', cursive;
+            margin: 2px 21px;
+            font-size: 4rem;
+
+        }
+
+        div#box2{
+            border-radius: 30px;
+            width: 66%;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            
+        }
+        div#box2 img {
+            height: 79%;
+            width: 862px;
+            /* padding-bottom: 0px; */
+        }
+        div#log_in {
+            display: flex;
+            align-items: center;
+            height: 450px;
+            width: 420px;
+            position: absolute;
+            left: 41%;
+            top: 24%;
+            z-index: -4;
+        }
+        .input{
+            font-weight: bold;
+            letter-spacing: 1px;
+            /* font-family: 'Jura', sans-serif; */
+            /* font-family:'Lobster', cursive;  */
+            margin: 4px;
+            width: 97%;
+            height: 32px;
+            padding: 0px 27px;
+            border-radius: 8px;
+            outline: none;
+            border: 3px solid black;
+        }
+        .check{
+            height: 13px;
+            margin: 2px;
+        }
+        .show-password{
+            display: inline;
+            color: grey;
+        }
+        #button{
+            height: 33px;
+            margin: 4px;
+            width: 96%;
+            font-weight: bold;
+            background-color: #3f9ace;
+            color: white;
+            border: 1px solid #3f9ace;
+            border-radius: 8px;
+            outline: none;
+            cursor: pointer;
+        }
+        #button:hover{
+            background-color:#1977ae;
+            border: 1px solid;
+        }
+        #log_in form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+                
+        
+    
+        
+    </style>
+</head>
+<body>
+    <nav id="navigation">
+        <ul>
+            <li><a  id="log">Log in</a></li>
+            <li><a id="sign">Sign up</a></li>
+        </ul>
+    </nav>
+    <div id="container">
+        <div id="box1" class="box">
+            <img src="birdlogo.png">
+            <h1>Accor hotels</h1>
+            <h2>"Just having satisfied customers isn’t good enough anymore. If you really want a booming business, you have to create raving fans."</h2>
+        </div>
+        <div id="box2" class="box"><img src="admin_desk.png"></div>
+    </div>
+    <div id="log_in">
+        
+        <form action="" id="form">
+            <input type="text" class="input" placeholder="Username">
+            <input type="password" class="input" placeholder="Password">
+            <p class="show-password"><input type="checkbox" class="check"> Show password</p>
+            <button type="button" id="button">Log In</button>
+        </form>
+    </div>
+</body>
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#log").click(function(){
+            $("#container").fadeToggle();
+
+        })
+
+    })
+        
+    
+</script>
+</html>

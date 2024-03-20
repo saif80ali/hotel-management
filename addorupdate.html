@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        div#container {
+            display: flex;
+            width: 540px;
+            margin: 12px auto;
+            justify-content: space-around;
+        }
+
+        .buttons {
+            cursor: pointer;
+            padding: 12px;
+            color: white;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        div#addRoom {
+            background-color: #24a0ed;
+            border: 2px solid #24a0ed;
+        }
+
+        div#updateRoom {
+            color: #24a0ed;
+            border: 2px solid #24a0ed;
+        }
+        div#another_container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .addupdate {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    .input {
+        border: 2px dotted;
+        border-radius: 9px;
+        padding: 9px;
+        margin: 4px;
+        height: 36px;
+        width: 470px;
+        outline: none;
+    }
+    .second-button {
+        margin: 5px;
+        height: 30px;
+        width: 450px;
+        color: white;
+        background-color: red;
+        border: 2px solid black;
+        outline: none;
+        font-weight: bold;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+    h2 {
+        text-align: center;
+        color: red;
+    }
+    .tggle{
+        display: flex;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="addRoom" class="buttons">Insert Room
+        </div>
+        <div id="updateRoom" class="buttons">Update a Room</div>
+    </div>
+    <form action="">
+        <div id="another_container">
+            <div id="add" class="addupdate">
+                <input type="text" placeholder="Room Description" class="input">
+                <input type="text" placeholder="Quantity" class="input">
+                <input type="text" placeholder="Image" class="input">
+                <input type="text" placeholder="Price" class="input">
+                <button class="second-button">Submit</button>
+
+            </div>
+            <div id="update" class="addupdate">
+                <input type="text" placeholder="Room-ID" class="input">
+                <input type="text" placeholder="Quantity" class="input">
+                <button class="second-button">Update Item</button>
+
+            </div>
+    </form>
+        </div>
+        <h2>Random Text</h2>
+
+</body>
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#addRoom").click(function(){
+            $("#another_container").toggleClass(".tggle")
+            $("#add").css("display","flex");
+            $("#update").css("display","none");
+
+        })
+        $("#updateRoom").click(function(){
+            $("#another_container").toggleClass(".tggle")
+            $("#add").css("display","none");
+            $("#update").css("display","flex");
+
+        })
+
+    })
+</script>
+</html>

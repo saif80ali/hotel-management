@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        img{
+            margin: -2px auto;
+            display: block;
+            height: 223px;
+            width: 328px;
+        }
+        #container{
+            border-top:1px solid gray;
+            margin:4px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 1000px;
+            height: 500px;
+            font-family: 'Roboto', sans-serif;
+
+        }
+        .item{
+            font-size: 25px;
+            margin: 5px;
+            
+        }
+        .item p{
+            display: inline;
+            font-weight: bold;
+        }
+        .button{
+            align-items: flex-end;
+            width: 20%;
+            color: white;
+            background-color: #24a0ed;
+            height: 38px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            margin: 4px;
+            font-size: 14px;
+        }
+        .button:hover{
+            background-color: #208fd5;
+        }
+        .last-item{
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            flex-direction: column;
+        }
+        .adver{
+            font-size: 13px;
+            color: gray;
+        }
+
+    </style>
+    <script src="https://kit.fontawesome.com/a7f7913510.js" crossorigin="anonymous"></script>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var Amount1 = $("#amount").text();
+            console.log(Amount1)
+            var Amount = parseInt(Amount1);
+            var Tax = 0;
+            if (Amount <= 2500){
+                Tax = Amount * 0.12;
+
+            }
+            else{
+                Tax = Amount * 0.18;
+            }
+            $("#gst").text(Tax);
+            console.log(Tax)
+            var finalAmount = 0
+            finalAmount = Amount + Tax;
+            console.log(finalAmount);
+            var final1 = finalAmount.toFixed();
+            console.log(final1);
+
+            $("#finalAmount").text(final1);
+
+            var allDate = $("#date").text()
+            var thisDate = allDate.split('/');
+            console.log(thisDate)
+            var newDate = [thisDate[1],thisDate[0],thisDate[2] ].join("/");
+            console.log(newDate)
+            $("#date").text(newDate)
+
+
+        });
+    </script>
+</head>
+<body>
+    <img src="payment.jpg">
+    
+    <div id="container">
+        <div class="item"><span>Name:</span> <p>Saif Ali</p></div>
+        <div class="item"><span>No. of Adults:</span> <p>6</p></div>
+        <div class="item"><span>No. of Children:</span> <p>6</p></div>
+        <div class="item"><span>No. of Rooms:</span> <p>2</p></div>
+        <div class="item"><span>Room Type:</span> <p>Classic Business room</p></div>
+        <div class="item"><span>Check in date:</span> <p id="date">12/02/2021</p></div>
+        <div class="item"><span>Check out date:</span> <p>14/02/2021</p></div>
+        <div class="item"><span>Price: &#8377;</span><p id="amount">4500</p></div>
+        <div class="item"><span>GST: &#8377;</span><p id="gst"></p></div>
+        <hr>
+        <div class="item last-item">
+            <div class="item" ><span>Final Amout: &#8377;</span><p id="finalAmount"></p></div>
+            <p class="adver">(Including breakfast and all available aminities.)</p>
+            <button class="button"><i class="fas fa-arrow-right"></i> Proceed to Payment</button>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

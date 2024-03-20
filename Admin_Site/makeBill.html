@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background-image: linear-gradient(white, #2b7eb2);
+        }
+        div#heading {
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #heading img {
+            height: 73px;
+            position: relative;
+            top: -2px;
+            filter: invert(46%);
+        }
+        #heading h1 {
+            color: #868484;
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+        }
+        .p{
+            text-align: center;
+            width: 725px;
+            margin: auto;
+            color: gray;
+            border-bottom: 2px solid gray;
+        }
+        .span{
+            font-weight: bold;
+        }
+        div#container {
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            margin: 4px auto;
+        }
+        .input {
+            height: 31px;
+            padding: 12px;
+            margin: 8px 0px;
+            border: 2px solid;
+            border-radius: 17px;
+            outline: none;
+        }
+        button#button {
+            outline: none;
+            width: 20%;
+            margin: auto;
+            height: 29px;
+            font-weight: bold;
+            color: white;
+            background-color: #24a0ed;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+        #table_container{
+            display: none;
+            width: 617px;
+            margin: 12px auto;
+           
+        }
+        table td, th{
+            border: 2px solid black;
+        }
+        table td{
+            height: 30px;
+            padding: 6px;
+        }
+        table td:nth-child(even){
+            text-align: center;
+
+        }
+        table th:nth-child(even){
+            text-align: center;
+
+        }
+        .first{
+            width: 500px;
+        }
+        .second{
+            width: 20%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id = "heading"><img src="birdlogo.png"><h1>ccor Hotels</h1></div>
+    <p class="p">A hotel should relieve travelers of their insecurity and loneliness. It should make them feel warm and cozy.<br>    
+        <span class = "span" >1, JBS Haldane Ave, Tangra, Kolkata, West Bengal 700046</span>
+    </p>
+    <div id="container">
+        Name of the recipient <input type="text" class="input" id="name">
+        Room Charge <input type="number" class="input" id="room_charge">
+        Food & Beverage Charge <input type="number" class="input" id="fb">
+        Room Service Charge <input type="number" class="input" id="room_service">
+        Discount% <input type="number" class="input" id="discount">
+        Penalty( If any) <input type="number" class="input" id="penalty">
+        <button id="button">Submit</button>
+        
+    </div>
+    <div id="table_container">
+        <table>
+            <tr>
+                <th class="first">Particulars</th>
+                <th class="second">Amount</th>
+            </tr>
+            <tr>
+                <td>Name of the recipient</td>
+                <td><span class="name"></span></td>
+            </tr>
+            <tr>
+                <td>Room Charge</td>
+                <td><span class="room_charge"></span></td>
+            </tr>
+            <tr>
+                <td>Food & Beverage Charge</td>
+                <td><span class="fb"></span></td>
+            </tr>
+            <tr>
+                <td>Room Service Charge</td>
+                <td><span class="room_service"></span></td>
+            </tr>
+            <tr>
+                <td>Penalty</td>
+                <td><span class="penalty"></span></td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td><span class="tax"></span></td>
+            </tr>
+            <tr>
+                <td>Discount</td>
+                <td><span class="discount"></span></td>
+            </tr>
+            
+            <tr>
+                <th>Total</th>
+                <th><span>&#8377;</span><span class="total"></span></th>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#button").click(function(){
+            $("#table_container").css('display','block');
+            var name = $("#name").val()
+            $(".name").text(name)
+            var room_charge = $("#room_charge").val()
+            $(".room_charge").text(room_charge)
+            var fb = $("#fb").val()
+            $(".fb").text(fb)
+            var room_service = $("#room_service").val()
+            $(".room_service").text(room_service)
+            var amt = parseInt(room_charge) + parseInt(fb) + parseInt(room_service)
+            var tax = amt * 0.18
+            $(".tax").text(tax)
+            var penalty = $("#penalty").val()
+            $(".penalty").text(parseInt(penalty))
+            var discount1 = $("#discount").val()
+            var discount = (amt * parseFloat(discount1))/100 
+            $(".discount").text(discount)
+            var total = amt + tax + parseInt(penalty) - discount
+            $(".total").text(total)
+            $("#container").css('display','none');
+        })
+    })
+</script>
+</html>

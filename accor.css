@@ -1,0 +1,467 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#navigation {
+    z-index: 4;
+    position:fixed;
+    height: 80px;
+    width: 99vw;
+    display: flex;
+    background-color: #5d4954;
+}
+#navigation img{
+    height: 174px;
+    width: 374px;
+    position: relative;
+    top: -29px;
+}
+#navigation ul{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 0px;   
+    margin: 13px;
+}
+#navigation ul li{
+    list-style: none;
+    margin: 6px;
+}
+#logo{
+    height:200px;
+    width: 500px;
+}
+.listMembers{
+    text-decoration: none;
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    padding: 15px;
+    font-weight: bold;
+    color:white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin:12px;
+    border-radius: 36px;
+    letter-spacing: 2px;
+
+}
+.listMembers:hover{
+    
+    background-color: #6c5461;
+}
+    
+.section::before{
+    /* position: fixed; */
+    margin-top: 10px;
+    content: " ";
+    position: absolute;
+    height: 109vh;
+    width: 99vw;
+    background-image: url('background.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.73);
+    background-blend-mode: darken;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 111vh;
+    width: 99vw;   
+}
+
+.hotel{
+    color:white;
+    font-family: 'Dancing Script', cursive;
+}
+.accor{
+    margin: 10px;
+    text-align: center;
+    z-index: 1;
+    color: #5d4954;
+    font-size: 9rem;
+    font-family: 'Dancing Script', cursive;
+    width: 52%;
+}
+.booking-box{
+    margin: 4px;
+    z-index: 1;
+    display: flex;
+    /* border: 2px solid white; */
+    border-radius: 8px;
+    background-color: black;
+    width: 1000px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+
+}
+.booking-boxes{
+    height: 100px;
+    width: 32%;
+    margin-left: 1px;
+    margin-right:1px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+ div.booking-boxes .fas{
+    font-size: 30px;
+    color: white;
+    margin: 12px;
+}
+
+.booking-boxes p{
+    color: white;
+    font-family: 'Jura', sans-serif;
+}
+
+#time{
+    
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: black;
+    height: 52px;
+    width: 16%;
+    color: white;
+    font-family: 'Jura', sans-serif;
+    border: 1px solid;
+}
+#time .far{
+    font-size: 30px;
+    color: white;
+    margin: 12px;
+
+}
+.sign-in{
+    z-index: 1;
+    font-family: 'Jura', sans-serif;
+    background-color: black;
+    color: white;
+    outline: none;
+    border: 2px solid black;
+    height: 40px;
+    width: 89px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.sign-in:hover{
+    border: 2px solid white;
+    background-color: white;
+    color: #5d4954;
+    font-weight: bold;
+}
+.hotel-info{
+    /* position: sticky; */
+    z-index: 2;
+    justify-content: center;
+    width:99vw;
+    height: 500px;
+    background-color: #D3D3D3;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.first-child{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 90%;
+    display: flex;
+    margin-right: 66px;
+}
+.first-child-text{
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    color: #3c3838;
+}
+.second-child-image{
+    position: relative;
+    height: 260px;
+    width: 260px;
+    border-radius: 170px;
+    top: 187px;
+    right: 136px;
+}
+.second-child{
+    background-image: url(hotelroom.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 414px;
+    height: 85%;
+}
+
+
+#aminities{
+    display: grid;
+    grid-template-columns: 380px 380px 380px;
+    width: 90vw;
+    grid-gap: 2rem;
+    margin: auto;
+    justify-content: center;
+    border-top:4px solid #6d716b;
+    border-bottom: 1px solid grey;
+    padding-bottom:20px;
+}
+.each-aminities{
+    margin-top: 20px;
+    height: 550px;
+    text-align: center;
+
+}
+.each-aminities:hover{
+    box-shadow: 7px 5px 10px black;
+}
+.each-aminities img{
+    height: 250px;
+    width: 375px;
+}
+.key{
+    
+    font-size: 3rem;
+    display: block;
+    text-align: center;
+    font-family: 'Jura', sans-serif;
+    margin: 10px;
+}
+div.each-aminities .fas{
+    display: inline;
+    font-size: 30px;
+    color:#5d4954;
+    margin: 4px;
+    text-align: center;
+    
+}
+.each-aminities p{
+    text-align: center;
+    display: inline;
+    font-family: 'Jura', sans-serif;
+    font-size: 30px;
+    color:#5d4954;
+    border-bottom: 2px solid #6d716b;
+    margin: 4px;
+    font-weight: bold;
+}
+.each-aminities h3{
+    font-size: 16px;
+    color: #6d716b;
+    margin: 4px;
+    margin-top: 10px;
+}
+.video-section{
+    display: flex;
+    margin: 20px auto;
+    height: 300px;
+    width: 1020px;
+    border-bottom: 2px solid grey;
+    padding: 10px 0px;
+    border-top: 2px solid grey;
+
+}
+.first-part{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    outline: none;
+    
+}
+.first-part h1{
+    font-size: 4rem;
+    color: #5d4954;
+    font-family: 'Bangers', cursive;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.icon{
+    height: 98%;
+    position: relative;
+    left: 5px;
+}
+
+#container{
+    width: 50vw;
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    top: 220px;
+    left: 26vw;
+    margin: auto;
+    background: white;
+    border-radius: 12px;
+    align-items: center;
+    z-index: 2;
+    box-shadow: black 27px 30px 30px;
+    height: 427px;
+}
+#login{
+    display: block;
+    width: 50%;
+    border-right: 1px solid gray;
+    margin-right: 5px;
+}
+#login form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#login img{
+    height: 250px;
+    width: 370px;
+}
+.input{
+    font-weight: bold;
+    letter-spacing: 1px;
+    /* font-family: 'Jura', sans-serif; */
+    /* font-family:'Lobster', cursive;  */
+    margin: 4px;
+    width: 97%;
+    height: 32px;
+    padding: 0px 27px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid white;
+}
+.check{
+    height: 13px;
+    margin: 2px;
+}
+.show-password{
+    display: inline;
+    color: grey;
+}
+#button{
+    height: 33px;
+    margin: 4px;
+    width: 96%;
+    font-weight: bold;
+    background-color: #3f9ace;
+    color: white;
+    border: 1px solid #3f9ace;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+}
+#button:hover{
+    background-color:#1977ae;
+    border: 1px solid;
+}
+#register{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#register span{
+    cursor: default;
+    color: gray;
+    font-size: 19px;
+}
+#register img{
+    height: 250px;
+    width: 370px;
+}
+#register span a{
+    color:#5d4954 ;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@keyframes movedown{
+    from{
+        top: -200px;
+    }
+    to{
+        top:220px;
+    }
+
+}
+#social-media{  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.fb-logo{
+    margin-bottom: 10px;
+    display: inline;    
+}
+.fb-logo img{
+    height: 33px;
+    width: 36px;
+    border-radius: 41px;
+    opacity: 0.6;
+}
+.media{
+    width: 400px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.fb-logo a{
+    margin: 20px;
+    text-decoration: none;
+}
+.fb-logo img:hover{
+    opacity: 2;
+    
+}
+.follow-us{
+    color: grey;
+    display: block;
+    margin: 15px;
+}
+#twitter{
+    width: 66px;
+}
+#youtube{
+    width: 56px;
+
+}
+.box-border{
+    box-shadow:4px 3px 6px black;
+}
+footer{
+    height: 44px;
+    width: 99vw;
+    background-color: #5d4954;
+    color: white;
+    text-align: center;
+}
+footer p{
+    font-family: 'Pacifico', cursive;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+div#sponsor {
+    border-top: 1px solid grey;
+    width: 80vw;
+    margin: 2px auto;
+}
+marquee {
+    height: 89px;
+}
+img.sponsors {
+    height: 77px;
+    margin: 10px 40px;
+}
+h2#text1 {
+    color: gray;
+    text-align: center;
+    font-size: 19px;
+    margin-top: 10px;
+}
+
+
